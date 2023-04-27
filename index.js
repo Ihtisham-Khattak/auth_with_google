@@ -2,6 +2,9 @@ const express = require("express");
 const cors = require("cors");
 const passport = require("passport");
 const cookieSession = require("cookie-session");
+const passportUser = require("./passport");
+const authRoutes = require("./routes/Auth")
+
 require("dotenv").config();
 
 const app = express();
@@ -40,3 +43,5 @@ app.get("/", (req, res) => {
 app.listen(PORT, () => {
   console.log(`listening on http://localhost:${PORT}`);
 });
+
+
